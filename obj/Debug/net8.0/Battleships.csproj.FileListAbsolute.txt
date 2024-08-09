@@ -1,0 +1,14 @@
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.AssemblyInfoInputs.cache
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.AssemblyInfo.cs
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.csproj.CoreCompileInputs.cache
+C:\Users\dncha\source\repos\Battleships\bin\Debug\net8.0\Battleships.exe
+C:\Users\dncha\source\repos\Battleships\bin\Debug\net8.0\Battleships.deps.json
+C:\Users\dncha\source\repos\Battleships\bin\Debug\net8.0\Battleships.runtimeconfig.json
+C:\Users\dncha\source\repos\Battleships\bin\Debug\net8.0\Battleships.dll
+C:\Users\dncha\source\repos\Battleships\bin\Debug\net8.0\Battleships.pdb
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.dll
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\refint\Battleships.dll
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.pdb
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.genruntimeconfig.cache
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\ref\Battleships.dll
