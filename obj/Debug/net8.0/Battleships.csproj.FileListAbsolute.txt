@@ -12,3 +12,4 @@ C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\refint\Battleships.dll
 C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.pdb
 C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.genruntimeconfig.cache
 C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\ref\Battleships.dll
+C:\Users\dncha\source\repos\Battleships\obj\Debug\net8.0\Battleships.sourcelink.json
