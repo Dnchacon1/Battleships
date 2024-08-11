@@ -48,7 +48,7 @@ class BuildField
             HardField = UpdateField(Attack, HardField, check.Item1);
 
             //This is the HardBot Section
-            Attack = HardBot.NewAttack();
+            Attack = HardBot.NewestAttack();
             check = HitDetect(Attack, EasyField);
             if(check.Item1 && check.Item2 == false) {HardHits++; Console.WriteLine("Hard Bot makes a hit!"); HardBot.UpdateHitFlag(true, Attack);}
             else {HardBot.UpdateHitFlag(false, Attack);}

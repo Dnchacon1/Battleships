@@ -19,16 +19,34 @@ namespace Battleships
         public static int[,] PlaceShip(int[,] field)
         {
             Random random = new Random();
-            //place a ship randomly in the array, without reaching out of bounds.
-            int length = field.GetLength(0);
-            int randomIndexX = random.Next(0, length - 2);
-            int randomIndexY = randomIndexX;
-            for (int i = 0; i < 3; i++)
+            //place a ship randomly in the array, without reaching out of bounds. Places randomly Vertically or Horizontally
+            int direction = random.Next(0, 2);
+            int HLength = field.GetLength(0);
+            int VLength = field.GetLength(1);
+            if (direction == 0)
             {
-                field[randomIndexX, randomIndexY] = 1;
-                randomIndexY++;
+                //if random direction is 0, place ship randomly horizontally, within field
+                int randomIndexX = random.Next(0, HLength - 2);
+                int randomIndexY = random.Next(0,7);
+                for (int i = 0; i < 3; i++)
+                {
+                    field[randomIndexX, randomIndexY] = 1;
+                    randomIndexY++;
+                }
             }
-            return field;
+            if(direction == 1)
+            {
+                //if random direction is 1, place ship randomly Vertically, within field
+                int randomIndexX = random.Next(0, VLength - 2);
+                int randomIndexY = random.Next(0,7);
+                for (int i = 0; i < 3;i++)
+                {
+                    field[randomIndexX, randomIndexY] = 1;
+                    randomIndexX++;
+                }
+            }
+
+                return field;
         }
         
         public static int[,] GetMyField()
