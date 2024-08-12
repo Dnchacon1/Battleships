@@ -20,14 +20,14 @@ namespace Battleships
         {
             Random random = new Random();
             //place a ship randomly in the array, without reaching out of bounds. Places randomly Vertically or Horizontally
-            int direction = random.Next(0, 2);
+            int direction = random.Next(0, 2); 
             int HLength = field.GetLength(0);
             int VLength = field.GetLength(1);
             if (direction == 0)
             {
                 //if random direction is 0, place ship randomly horizontally, within field
-                int randomIndexX = random.Next(0, HLength - 2);
-                int randomIndexY = random.Next(0,7);
+                int randomIndexX = random.Next(0, 7);
+                int randomIndexY = random.Next(0,HLength - 2);
                 for (int i = 0; i < 3; i++)
                 {
                     field[randomIndexX, randomIndexY] = 1;
@@ -54,6 +54,7 @@ namespace Battleships
             return MyField;
         }
         /*
+         * determined to be unused/useless
         public static int[,] GetEnemyField()
         {
             return EnemyField;

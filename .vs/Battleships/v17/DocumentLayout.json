@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dncha\\source\\repos\\Battleships\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|c:\\users\\dncha\\source\\repos\\battleships\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|c:\\users\\dncha\\source\\repos\\battleships\\easybot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|solutionrelative:easybot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|c:\\users\\dncha\\source\\repos\\battleships\\harderbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|solutionrelative:harderbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|c:\\users\\dncha\\source\\repos\\battleships\\hardbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|solutionrelative:hardbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|c:\\users\\dncha\\source\\repos\\battleships\\easybot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|solutionrelative:easybot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|c:\\users\\dncha\\source\\repos\\battleships\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71901DA4-A5DC-4640-A374-744ADED6111B}|Battleships.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HarderBot.cs",
+              "DocumentMoniker": "C:\\Users\\dncha\\source\\repos\\Battleships\\HarderBot.cs",
+              "RelativeDocumentMoniker": "HarderBot.cs",
+              "ToolTip": "C:\\Users\\dncha\\source\\repos\\Battleships\\HarderBot.cs",
+              "RelativeToolTip": "HarderBot.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAAAowOsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T19:40:26.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HardBot.cs",
               "DocumentMoniker": "C:\\Users\\dncha\\source\\repos\\Battleships\\HardBot.cs",
               "RelativeDocumentMoniker": "HardBot.cs",
               "ToolTip": "C:\\Users\\dncha\\source\\repos\\Battleships\\HardBot.cs",
               "RelativeToolTip": "HardBot.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAwDIAAAAJAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAIA9wBIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-09T03:50:35.295Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "EasyBot.cs",
               "DocumentMoniker": "C:\\Users\\dncha\\source\\repos\\Battleships\\EasyBot.cs",
               "RelativeDocumentMoniker": "EasyBot.cs",
               "ToolTip": "C:\\Users\\dncha\\source\\repos\\Battleships\\EasyBot.cs",
               "RelativeToolTip": "EasyBot.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAqwC8AAAAKAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAmwBYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T03:46:16.485Z"
+              "WhenOpened": "2024-08-09T03:46:16.485Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dncha\\source\\repos\\Battleships\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\dncha\\source\\repos\\Battleships\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAA+AAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T01:17:37.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T01:17:37.573Z"
             }
           ]
         }

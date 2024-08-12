@@ -19,59 +19,81 @@ class BuildField
     {
         //initialize win conditions and bool for hit detection and hit counts
         bool EWin = false;
-        bool Hwin = false;
+        bool HWin = false;
+        bool HHWin = false;
         (bool, bool) check;
         int HardHits = 0;
         int EasyHits = 0;
+        int HarderHits = 0;
         //initalize the two bots
         EasyBot Ebot = new EasyBot();
         HardBot HBot = new HardBot();
+        HarderBot HHBot = new HarderBot();
         EasyBot.StartUp();
         HardBot.StartUp();
+        HarderBot.StartUp();
         //build the fields for the Main class to reference
         int[,] EasyField = EasyBot.GetMyField();
         int[,] HardField = HardBot.GetMyField();
+        int[,] HarderField = HarderBot.GetMyField();
         Console.WriteLine("This is a game of Battleships where two bots attack each other!");
         Console.WriteLine("Press Enter to Continue:");
         Console.ReadLine();
 
-        while( EWin == false && Hwin == false )
+        while( EWin == false && HWin == false && !HHWin )
         {
             //EasyBot will go first since it's dumb. This is the Easy Bot Section
             //below is a tuple recieving coordinates from the Bots. Calling it's items is Attack.Item1/2
             (int, int) Attack = EasyBot.Attack();
             //this is specifcally checking if the attack hit anything
-            check = HitDetect(Attack, HardField);
-            //updates hit counts if there is a hit
+            check = HitDetect(Attack, HarderField);
+            //updates hit counts if there is a hit that wasn't previously hit
             if(check.Item1 && check.Item2 == false) {EasyHits++; Console.WriteLine("Easy Bot makes a hit!"); }
             //updating hardfield based off the above attack
-            HardField = UpdateField(Attack, HardField, check.Item1);
+            HarderField = UpdateField(Attack, HarderField, check.Item1);
 
+            /*
             //This is the HardBot Section
-            Attack = HardBot.NewAttack();
-            check = HitDetect(Attack, EasyField);
+            Attack = HardBot.NewAttack(); //collect HardBot's attack coordinates
+            check = HitDetect(Attack, EasyField); //check if the coords hit anything
+            //if hit, and is not the second time hitting ship, update bot hit count, output to user, tell bot it was a hit and the location
             if(check.Item1 && check.Item2 == false) {HardHits++; Console.WriteLine("Hard Bot makes a hit!"); HardBot.UpdateHitFlag(true, Attack);}
-            else {HardBot.UpdateHitFlag(false, Attack);}
+            else {HardBot.UpdateHitFlag(false, Attack);} //otherwise, tell the bot there was no hit at the location attacked
+            EasyField = UpdateField(Attack, EasyField, check.Item1); //update EasyBot's field with shots placed
+            */
+
+            //This is the harder bot section
+            Attack = HarderBot.Attack(); //Collect HarderBot's attack cords
+            check = HitDetect(Attack, EasyField); //check if the coords hit anything
+            //if hit and not the first time, update hit count and output results to user, return results to bot
+            if (check.Item1 && !check.Item2) { HarderHits++; Console.WriteLine("Harder bot makes a hit!"); }
+            HarderBot.UpdateHitFlag(check.Item1, Attack);
             EasyField = UpdateField(Attack, EasyField, check.Item1);
+
 
             //displays both fields
             Console.WriteLine("Easy Bot's Waters VVVVV");
             Console.WriteLine(BuildString(EasyField));
             Console.WriteLine("");
-            Console.WriteLine("Hard Bot's Waters VVVVV");
-            Console.WriteLine(BuildString(HardField));
+            Console.WriteLine("Harder Bot's Waters VVVVV");
+            Console.WriteLine(BuildString(HarderField));
             Console.WriteLine("");
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.WriteLine("\n\n\n\n"); //lines to separate previous displays from newest
 
             //checks win conditions
-            if (HardHits == 3) { Hwin = true; }
+            if (HardHits == 3) { HWin = true; }
             if(EasyHits == 3) { EWin = true; }
+            if(HarderHits == 3) { HHWin = true; }
         }
-        if(Hwin)
+        if(HWin)
         {
             Console.WriteLine("Hard Bot has won the game and sunk the Easy Bot's Ship!");
+        }
+        else if(HHWin)
+        {
+            Console.WriteLine("Harder Bot has won the game and sunk the Easy Bot's Ship!");
         }
         else
         {
@@ -120,6 +142,8 @@ class BuildField
 
         //returns two booleans to be used accordingly: Item1=hit?, Item2=Hit already hit ship?
 
+        //should I just return true if the ship has been hit again?
+
         int CellValue = AField[pos.Item1, pos.Item2];
         if (CellValue == 1)
         {
@@ -128,17 +152,14 @@ class BuildField
         else if(CellValue == 3)
         {
             return (true, true);
-        }
-        else if(CellValue == 0 || CellValue == 2)
-        {
-            return (false, false);
-        }
+        } 
         else { return (false, false);}
     }
 
     static int[,] UpdateField((int, int) pos, int[,] AField, bool hit)
     {
         //given coordinates, update recieved field based on boolean received
+        //3 means ship hit, 2 means missed
         if(hit)
         {
             AField[pos.Item1, pos.Item2] = 3;
